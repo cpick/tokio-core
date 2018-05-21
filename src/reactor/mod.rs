@@ -199,7 +199,8 @@ impl Core {
     ///
     /// This function will return the value that the future resolves to once
     /// the future has finished. If the future never resolves then this function
-    /// will never return.
+    /// will never return. Any other futures spawned on this core may still be
+    /// incomplete when this function returns.
     ///
     /// # Panics
     ///
