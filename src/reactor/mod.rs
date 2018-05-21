@@ -99,8 +99,8 @@ pub struct Remote {
     timer_handle: timer::Handle,
 }
 
-/// A non-sendable handle to an event loop, useful for manufacturing instances
-/// of `LoopData`.
+/// A non-sendable handle to an event loop, typically passed into functions that
+/// create I/O objects to bind them to this event loop.
 #[derive(Clone)]
 pub struct Handle {
     remote: Remote,
