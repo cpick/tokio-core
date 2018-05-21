@@ -255,7 +255,7 @@ impl Core {
     /// It only makes sense to call this method if you've previously spawned
     /// a future onto this event loop.
     ///
-    /// `loop { lp.turn(None) }` is equivalent to calling `run` with an
+    /// `loop { core.turn(None) }` is equivalent to calling `run` with an
     /// empty future (one that never finishes).
     pub fn turn(&mut self, max_wait: Option<Duration>) {
         let handle = self.rt.reactor().clone();
